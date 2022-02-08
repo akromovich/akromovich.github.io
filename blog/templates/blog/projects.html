@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Arch Design | Projects</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+	</head>
+	<body>
+		<!-- * nav -->
+		<nav class="nav container">
+			<a class="nav__brand" href="../index.html">
+				<img class="nav__logo" src="{% static 'img/logo.png' %}" alt="sitelogo" />
+			</a>
+			<div id="toggler" class="nav__toggle">
+				<svg id="toggler__img" width="100" height="100" viewBox="0 0 100 100">
+					<path
+						class="line line1"
+						d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+					/>
+					<path class="line line2" d="M 20,50 H 80" />
+					<path
+						class="line line3"
+						d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+					/>
+				</svg>
+			</div>
+			<div class="nav__lists">
+				<ul class="nav__list nav__list--links">
+					<li class="nav__item hidden">
+						<a class="nav__brand" href="{% url 'index' %}">
+							<img class="nav__logo" src="{% static 'img/logo.png' %}" alt="sitelogo" />
+						</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="{% url 'index' %}">Bosh sahifa</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="{% url 'about' %}">Biz haqimizda</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="{% url 'projects' %}">Loyihalar</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="{% url 'services' %}">Xizmatlar</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="{% url 'news' %}">Yangiliklar</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="{% url 'contacts' %}">Bog'lanish</a>
+					</li>
+					</li>
+				</ul>
+				<div class="nav__dropdown">
+					<button class="nav__lang langclick">
+						<img
+							class="lang__img langclick"
+							src="{% static 'img/uzb_flag_logo.png' %}"
+							alt=" "
+						/>
+						<span class="lang__text langclick">Uz</span>
+						<i class="fas fa-chevron-down langclick"></i>
+					</button>
+					<ul class="nav__list nav__list--langs">
+						<li class="nav__item lang">
+							<a class="nav__link tick" href="#" data-id="uz">
+								<img
+									class="lang__img tick"
+									src="{% static 'img/uzb_flag_logo.png' %}"
+									alt=" "
+									data-id="uz"
+								/>
+								<span class="lang__text tick" data-id="uz">Uz</span>
+							</a>
+						</li>
+						<li class="nav__item lang">
+							<a class="nav__link tick" href="#" data-id="ru">
+								<img
+									class="lang__img tick"
+									src="{% static 'img/russia_flag_logo.png' %}"
+									alt=" "
+									data-id="ru"
+								/>
+								<span class="lang__text tick" data-id="ru">Ru</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- ! location to be smooth scrolled to -->
+		<div id="smooth"></div>
+		<!-- * projects -->
+		<div class="projects">
+			<h1 class="projects__title">Bizning loyihalarimiz</h1>
+			<div class="project">
+				<div class="project__info project__info--left">
+					<h2 class="project__name">Project name</h2>
+					<p class="project__text">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+						inventore commodi odio? Veniam rerum et eligendi? Ullam
+						reprehenderit, aliquam inventore fugit doloribus pariatur reiciendis
+						ipsum facilis saepe. Dicta amet quia dolorum explicabo perspiciatis.
+						Facilis quos nemo amet, omnis dolore dicta, minus quas saepe quam
+						nisi fuga commodi. Accusantium, excepturi velit.
+					</p>
+					<div class="project__year">2020</div>
+				</div>
+				<img
+					class="project__img project__img--right"
+					src="{% static 'img/project.jpg' %}"
+					alt="project image"
+				/>
+			</div>
+			<div class="project">
+				<img
+					class="project__img project__img--left"
+					src="{% static 'img/project.jpg' %}"
+					alt="project image"
+				/>
+				<div class="project__info project__info--left">
+					<h2 class="project__name">Project name</h2>
+					<p class="project__text">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+						inventore commodi odio? Veniam rerum et eligendi? Ullam
+						reprehenderit, aliquam inventore fugit doloribus pariatur reiciendis
+						ipsum facilis saepe. Dicta amet quia dolorum explicabo perspiciatis.
+						Facilis quos nemo amet, omnis dolore dicta, minus quas saepe quam
+						nisi fuga commodi. Accusantium, excepturi velit.
+					</p>
+					<div class="project__year">2020</div>
+				</div>
+			</div>
+			<div class="project">
+				<div class="project__info project__info--left">
+					<h2 class="project__name">Project name</h2>
+					<p class="project__text">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+						inventore commodi odio? Veniam rerum et eligendi? Ullam
+						reprehenderit, aliquam inventore fugit doloribus pariatur reiciendis
+						ipsum facilis saepe. Dicta amet quia dolorum explicabo perspiciatis.
+						Facilis quos nemo amet, omnis dolore dicta, minus quas saepe quam
+						nisi fuga commodi. Accusantium, excepturi velit.
+					</p>
+					<div class="project__year">2020</div>
+				</div>
+				<img
+					class="project__img project__img--right"
+					src="{% static 'img/project.jpg' %}"
+					alt="project image"
+				/>
+			</div>
+			<div class="project">
+				<img
+					class="project__img project__img--left"
+					src="{% static 'img/project.jpg' %}"
+					alt="project image"
+				/>
+				<div class="project__info project__info--left">
+					<h2 class="project__name">Project name</h2>
+					<p class="project__text">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+						inventore commodi odio? Veniam rerum et eligendi? Ullam
+						reprehenderit, aliquam inventore fugit doloribus pariatur reiciendis
+						ipsum facilis saepe. Dicta amet quia dolorum explicabo perspiciatis.
+						Facilis quos nemo amet, omnis dolore dicta, minus quas saepe quam
+						nisi fuga commodi. Accusantium, excepturi velit.
+					</p>
+					<div class="project__year">2020</div>
+				</div>
+			</div>
+		</div>
+		<!-- * other projects -->
+		<div class="container">
+			<h2 class="ops__title">Boshqa Loyihalar</h2>
+			<div class="ops">
+				<div class="op">
+					<img class="op__img" src="{% static 'img/gallery.jpg' %}" alt="gallery img" />
+					<a class="op__content op__inner" href="project.html">
+						<h3 class="op__name">Project name</h3>
+						<div class="op__category">Project category</div>
+					</a>
+				</div>
+				<div class="op">
+					<img class="op__img" src="{% static 'img/gallery.jpg' %}" alt="gallery img" />
+					<a class="op__content op__inner" href="project.html">
+						<h3 class="op__name">Project name</h3>
+						<div class="op__category">Project category</div>
+					</a>
+				</div>
+				<div class="op">
+					<img class="op__img" src="{% static 'img/gallery.jpg' %}" alt="gallery img" />
+					<a class="op__content op__inner" href="project.html">
+						<h3 class="op__name">Project name</h3>
+						<div class="op__category">Project category</div>
+					</a>
+				</div>
+				<div class="op">
+					<img class="op__img" src="{% static 'img/gallery.jpg' %}" alt="gallery img" />
+					<a class="op__content op__inner" href="project.html">
+						<h3 class="op__name">Project name</h3>
+						<div class="op__category">Project category</div>
+					</a>
+				</div>
+				<div class="op">
+					<img class="op__img" src="{% static 'img/gallery.jpg' %}" alt="gallery img" />
+					<a class="op__content op__inner" href="project.html">
+						<h3 class="op__name">Project name</h3>
+						<div class="op__category">Project category</div>
+					</a>
+				</div>
+				<div class="op">
+					<img class="op__img" src="{% static 'img/gallery.jpg' %}" alt="gallery img" />
+					<a class="op__content op__inner" href="project.html">
+						<h3 class="op__name">Project name</h3>
+						<div class="op__category">Project category</div>
+					</a>
+				</div>
+				<div class="op">
+					<img class="op__img" src="{% static 'img/gallery.jpg' %}" alt="gallery img" />
+					<a class="op__content op__inner" href="project.html">
+						<h3 class="op__name">Project name</h3>
+						<div class="op__category">Project category</div>
+					</a>
+				</div>
+				<div class="op">
+					<img class="op__img" src="{% static 'img/gallery.jpg' %}" alt="gallery img" />
+					<a class="op__content op__inner" href="project.html">
+						<h3 class="op__name">Project name</h3>
+						<div class="op__category">Project category</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- * footer -->
+		<div class="footer">
+			<div class="footer__content">
+				<div class="container">
+					<div class="footer__top">
+						<div class="footer__contacts">
+							<a class="footer__brand" href="#">
+								<img
+									class="footer__logo"
+									src="{% static 'img/footer_logo.png' %}"
+									alt="footer logo"
+								/>
+							</a>
+							<div class="footer__line"></div>
+							<div class="footer__contactbox">
+								<a class="footer__contact" href="tel:+998 99 123 45 67">
+									<i class="fas fa-phone-alt footer__contact--icon"></i>
+									<span class="footer__contact--text">+998 99 123 45 67</span>
+								</a>
+							</div>
+							<div class="footer__contactbox">
+								<a class="footer__contact" href="mailto:info@archdesign.uz">
+									<i class="fas fa-envelope footer__contact--icon"></i>
+									<span class="footer__contact--text">info@archdesign.uz</span>
+								</a>
+							</div>
+							<div class="footer__contactbox">
+								<a
+									class="footer__contact"
+									href="https://www.google.com/maps/search/+%D0%B3.+%D0%A2%D0%B5%D1%80%D0%BC%D0%B5%D0%B7,/@37.2290345,67.2694544,18.74z"
+									target="_blank"
+								>
+									<i class="fas fa-map-marker-alt footer__contact--icon"></i>
+									<span class="footer__contact--text"
+										>г. Термез, ул. Шукрона, дом 15д</span
+									>
+								</a>
+							</div>
+						</div>
+						<div class="footer__links">
+							<h3 class="footer__links--title">Ma'lumot</h3>
+							<ul class="footer__list">
+								<li class="footer__item">
+									<a class="footer__link" href="about.html">Biz haqimizda</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Loyihalar</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="services.html">Xizmatlar</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="news.html">Yangiliklar</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom-wrap">
+					<div class="container">
+						<div class="footer__bottom">
+							<div class="footer__copyright">
+								© 2022 Arch & Design Service, Все права защищены
+							</div>
+							<ul class="footer__social">
+								<li class="footer__social--item">
+									<a class="footer__social--link" href="#">
+										<i class="fab fa-facebook-f footer__social--icon"></i>
+									</a>
+								</li>
+								<li class="footer__social--item">
+									<a class="footer__social--link" href="#">
+										<i class="fab fa-telegram-plane footer__social--icon"></i>
+									</a>
+								</li>
+								<li class="footer__social--item">
+									<a class="footer__social--link" href="#">
+										<i class="fab fa-instagram footer__social--icon"></i>
+									</a>
+								</li>
+								<li class="footer__social--item">
+									<a class="footer__social--link" href="#">
+										<i class="fab fa-youtube footer__social--icon"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- * menu curtain -->
+		<div id="menu-curtain"></div>
+		<!-- * to top button -->
+		<a id="up" href="#" aria-label="up to top">
+			<i class="fas fa-chevron-up"></i>
+		</a>
+		<!-- ! link js -->
+		<script src="{% static 'js/general.js' %}"></script>
+		<script src="{% static 'js/dropdown.js' %}"></script>
+		<script src="{% static 'js/nav.js' %}"></script>
+		<script src="{% static 'js/upbutton.js' %}"></script>
+	</body>
+</html>
