@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Post,Work
+from .models import Post,Work,Articles
+from .forms import ArticlesForm
 
 
 def index(request):
@@ -21,9 +22,22 @@ def news(request):
 	return render(request,'blog/news.html')
 
 def project(request,pk):
+	art = Articles.objects.all()
+	error = ''
+	if request.method == 'POST':
+		form = ArticlesForm(request.POST)
+		if form.is_valid():
+			form.save()
+		else:
+			error = "Форма была неверной"
+
 	post = Post.objects.get(id=pk)
+	form  =ArticlesForm()
 	context = {
-		"all_posts":post
+		'forms':form,
+		"all_posts":post,
+		'error':error,
+		'arts':art
 	}
 	return render(request,'blog/project.html',context)
 

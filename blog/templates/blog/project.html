@@ -66,12 +66,8 @@
 					</li>
 				</ul>
 				<div class="nav__dropdown">
-					<button clas>
-						<img
-							class="lang__img langclick"
-							src="{% static 'img/uzb_flag_logo.png' %}"
-							alt=" "
-						/>
+					<button class="nav__lang langclick">
+						<img class="lang__img langclick" src="{% static 'img/uzb_flag_logo.jpg' %}" alt=" "/>
 						<span class="lang__text langclick">Uz</span>
 						<i class="fas fa-chevron-down langclick"></i>
 					</button>
@@ -80,7 +76,7 @@
 							<a class="nav__link tick" href="#" data-id="uz">
 								<img
 									class="lang__img tick"
-									src="{% static 'img/uzb_flag_logo.png' %}"
+									src="{% static 'img/uzb_flag_logo.jpg' %}"
 									alt=" "
 									data-id="uz"
 								/>
@@ -91,7 +87,7 @@
 							<a class="nav__link tick" href="#" data-id="ru">
 								<img
 									class="lang__img tick"
-									src="{% static 'img/russia_flag_logo.png' %}"
+									src="{% static 'img/russia_flag_logo0.jpg' %}"
 									alt=" "
 									data-id="ru"
 								/>
@@ -135,56 +131,23 @@
 		</div>
 		<!-- * comments -->
 		<div class="container">
-			<div class="comments">
-				<h2 class="comments__title">2 comments</h2>
-				<div class="comment">
-					<div class="comment__box">
-						<div class="comment__date">07.02.2022</div>
-						<div class="comment__text">
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
-							ipsum nisi. Libero aperiam repellendus, dicta dolore officiis
-							recusandae ipsum amet.
-						</div>
-					</div>
-				</div>
-				<div class="comment">
-					<div class="comment__box">
-						<div class="comment__date">07.02.2022</div>
-						<div class="comment__text">
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
-							ipsum nisi. Libero aperiam repellendus, dicta dolore officiis
-							recusandae ipsum amet.
-						</div>
-					</div>
-				</div>
-			</div>
+            {% for art in arts %}
+                <p>имя  пользователя: {{ art.title|safe }}</p>
+                <p>{{ art.text|safe }}</p><br>
+                <hr>
+            {% endfor %}
 			<!-- ! comment form -->
-			<h2 class="comments__form-title">Add your comment</h2>
-			<div class="comments__form-info">
-				Your email address will not be published.
-			</div>
-			<form class="comments__form">
-				<div class="comments__inputs">
-					<input
-						class="comments__input comments__input--name"
-						type="text"
-						name="name"
-						placeholder="Your Name"
-					/>
-					<input
-						class="comments__input comments__input--email"
-						type="email"
-						name="email"
-						placeholder="Email"
-					/>
+			<h2 class="comments__form-title">Добавьте свое коментарие</h2>
+			<form class="comments__form" method="post">
+				{% csrf_token %}
+                <div class="comments__inputs">
+					{{ forms.title }}
+                    {{ forms.email }}
 				</div>
-				<textarea
-					class="comments__textarea"
-					name="comment"
-					placeholder="Write Your Comment..."
-				></textarea>
+				    {{ forms.text }}
+                    <span> {{ error }}</span>
 				<div class="comments__btnbox">
-					<button class="comments__btn">Submit</button>
+					<button class="comments__btn" type="submit">Отправить</button>
 				</div>
 			</form>
 		</div>
