@@ -108,8 +108,8 @@
 				<div class="article__collage">
 					<img
 						class="article__img"
-						src="{% static 'img/collage1.jpg' %}"
-						alt="collage photo 1"
+                        src="{{all_posts.photo.url}}"
+                        alt="collage photo 1"
 					/>
 					<img
 						class="article__img"
@@ -127,30 +127,9 @@
 						<span class="article__span">2 comments</span>
 					</div>
 				</div>
-				<h1 class="article__title">Lorem, ipsum dolor.</h1>
+				<h1 class="article__title">{{ all_posts.title|safe }}</h1>
 				<p class="article__text">
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat sint
-					dolorum velit quos repellat neque aliquid fugit similique architecto
-					beatae non molestiae magnam ex corrupti, minus quo tenetur
-					necessitatibus deleniti enim iure placeat ut pariatur amet. Doloremque
-					fuga expedita animi aut? Ut numquam iste eveniet! Vitae molestias
-					cupiditate in. Commodi, eos! Ipsam eligendi ipsa vero harum ipsum nam
-					id commodi, incidunt exercitationem assumenda, provident ab explicabo
-					odit! Id excepturi unde, quas fuga nostrum voluptates ipsum, incidunt
-					pariatur, sint officiis nobis rem totam tempore a ipsa omnis! Saepe
-					ipsa ad, repellat est nemo voluptatum vel distinctio nesciunt itaque,
-					pariatur aliquam quo corporis nisi dolor beatae magnam asperiores
-					officiis impedit? Rerum velit facere vitae eos reiciendis, consectetur
-					impedit soluta ea optio odit ipsa repellendus a laborum quo,
-					voluptates quod quam. Fugit architecto exercitationem asperiores
-					deleniti quos eos cumque aut, sapiente pariatur dolorem nobis quasi
-					ratione. Atque et, quaerat perferendis ipsum natus ad magnam, ullam
-					provident necessitatibus dicta sed accusamus? Suscipit sed impedit
-					iure, minus itaque quo nam consectetur pariatur ducimus consequuntur
-					cum culpa exercitationem deleniti rem, facilis voluptates doloribus
-					adipisci ullam in. Illum, autem earum officiis soluta temporibus
-					voluptatibus ut vitae placeat eaque facere. Voluptates corporis odit
-					fuga nemo placeat, tempora quae?
+					{{ all_posts.text|safe }}
 				</p>
 			</div>
 		</div>
@@ -159,30 +138,22 @@
 			<div class="comments">
 				<h2 class="comments__title">2 comments</h2>
 				<div class="comment">
-					<img class="comment__img" src="{% static 'img/user.png' %}" alt="user" />
 					<div class="comment__box">
 						<div class="comment__date">07.02.2022</div>
 						<div class="comment__text">
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
 							ipsum nisi. Libero aperiam repellendus, dicta dolore officiis
 							recusandae ipsum amet.
-						</div>
-						<div class="comment__bottom">
-							<button class="comment__reply">Reply</button>
 						</div>
 					</div>
 				</div>
 				<div class="comment">
-					<img class="comment__img" src="{% static 'img/user.png' %}" alt="user" />
 					<div class="comment__box">
 						<div class="comment__date">07.02.2022</div>
 						<div class="comment__text">
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit,
 							ipsum nisi. Libero aperiam repellendus, dicta dolore officiis
 							recusandae ipsum amet.
-						</div>
-						<div class="comment__bottom">
-							<button class="comment__reply">Reply</button>
 						</div>
 					</div>
 				</div>

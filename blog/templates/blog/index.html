@@ -216,66 +216,24 @@
 		<div class="container">
 			<div class="swiper employees">
 				<div class="swiper-wrapper">
+                {% for work in works %}
 					<div class="swiper-slide">
-						<div class="employee">
-							<div class="employee__imgbox">
-								<img
-									class="employee__img"
-									src="{% static 'img/employee1.jpg' %}"
-									alt="employee__img"
-								/>
+                        <div class="employee">
+                            <div class="employee__imgbox">
+                            {% if work.photo %}
+                                <img class="employee__img" src="{{work.photo.url}}" alt="employee__img"/>
+                            {% else %}
+                                <img class="employee__img" src="{% static 'img/employee1.jpg' %}" alt="employee__img"/>
+                            {% endif %}
 							</div>
 							<div class="employee__box">
-								<h3 class="employee__name">Lorem ipsum dolor sit.</h3>
-								<p class="employee__info">Lorem ipsum dolor sit amet.</p>
+								<h3 class="employee__name">{{ work.title|safe}}</h3>
+								<p class="employee__info">{{ work.totle|safe}}</p>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide">
-						<div class="employee">
-							<div class="employee__imgbox">
-								<img
-									class="employee__img"
-									src="{% static 'img/employee2.jpg' %}"
-									alt="employee__img"
-								/>
-							</div>
-							<div class="employee__box">
-								<h3 class="employee__name">Lorem ipsum dolor sit.</h3>
-								<p class="employee__info">Lorem ipsum dolor sit amet.</p>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="employee">
-							<div class="employee__imgbox">
-								<img
-									class="employee__img"
-									src="{% static 'img/employee3.jpg' %}"
-									alt="employee__img"
-								/>
-							</div>
-							<div class="employee__box">
-								<h3 class="employee__name">Lorem ipsum dolor sit.</h3>
-								<p class="employee__info">Lorem ipsum dolor sit amet.</p>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="employee">
-							<div class="employee__imgbox">
-								<img
-									class="employee__img"
-									src="{% static 'img/employee4.jpg' %}"
-									alt="employee__img"
-								/>
-							</div>
-							<div class="employee__box">
-								<h3 class="employee__name">Lorem ipsum dolor sit.</h3>
-								<p class="employee__info">Lorem ipsum dolor sit amet.</p>
-							</div>
-						</div>
-					</div>
+                {% endfor %}
+
 				</div>
 
 				<div class="employee__button employee__button--prev">
