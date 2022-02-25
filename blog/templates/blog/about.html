@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -68,41 +69,20 @@
 						<a class="nav__link" href="{% url 'contacts' %}">Bog'lanish</a>
 					</li>
 				</ul>
-				<div class="nav__dropdown">
-					<button class="nav__lang langclick">
-						<img
-							class="lang__img langclick"
-							src="{% static 'img/uzb_flag_logo.jpg' %}"
-							alt=" "
-						/>
-						<span class="lang__text langclick">Uz</span>
-						<i class="fas fa-chevron-down langclick"></i>
-					</button>
-					<ul class="nav__list nav__list--langs">
-						<li class="nav__item lang">
-							<a class="nav__link tick" href="#" data-id="uz">
-								<img
-									class="lang__img tick"
-									src="{% static 'img/uzb_flag_logo.jpg' %}"
-									alt=" "
-									data-id="uz"
-								/>
-								<span class="lang__text tick" data-id="uz">Uz</span>
-							</a>
-						</li>
-						<li class="nav__item lang">
-							<a class="nav__link tick" href="#" data-id="ru">
-								<img
-									class="lang__img tick"
-									src="{% static 'img/russia_flag_logo0.jpg' %}"
-									alt=" "
-									data-id="ru"
-								/>
-								<span class="lang__text tick" data-id="ru">Ru</span>
-							</a>
-						</li>
-					</ul>
-				</div>
+				<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select name="language">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="Go">
+                </form>
 			</div>
 		</nav>
 		<!-- ! location to be smooth scrolled to -->
@@ -127,40 +107,19 @@
 		<!-- * abouts section -->
 		<div class="container">
 			<div class="abouts">
-				<div class="about">
+				{% for about in abouts %}
+                <div class="about">
 					<div class="about__box">
-						<h2 class="about__title">About Title</h2>
-						<div class="about__text">
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
-							nulla culpa ex, placeat quisquam similique consequatur architecto
-							labore! Officiis illum aut soluta recusandae ut. At totam natus
-							sint magni? Voluptatem nobis quia expedita quaerat suscipit cumque
-							at illo cum modi!
-						</div>
+						<h2 class="about__title">{{ about.title|safe}}</h2>
+						<div class="about__text">{{ about.text|safe }}</div>
 					</div>
 					<img
-						src="{% static 'img/about1.jpg' %}"
+						src="{{about.photo.url}}"
 						alt="about__image"
 						class="about__img about__img--right"
 					/>
 				</div>
-				<div class="about">
-					<img
-						src="{% static 'img/about2.jpg' %}"
-						alt="about__image"
-						class="about__img about__img--left"
-					/>
-					<div class="about__box">
-						<h2 class="about__title">About Title</h2>
-						<div class="about__text">
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
-							nulla culpa ex, placeat quisquam similique consequatur architecto
-							labore! Officiis illum aut soluta recusandae ut. At totam natus
-							sint magni? Voluptatem nobis quia expedita quaerat suscipit cumque
-							at illo cum modi!
-						</div>
-					</div>
-				</div>
+                {% endfor %}
 			</div>
 		</div>
 		<div class="why">
@@ -239,74 +198,31 @@
 		<div class="container">
 			<div class="swiper employees">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="employee">
-							<div class="employee__imgbox">
-								<img
-									class="employee__img"
-									src="{% static 'img/employee1.jpg' %}"
-									alt="employee__img"
-								/>
-							</div>
-							<div class="employee__box">
-								<h3 class="employee__name">Lorem ipsum dolor sit.</h3>
-								<p class="employee__info">Lorem ipsum dolor sit amet.</p>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="employee">
-							<div class="employee__imgbox">
-								<img
-									class="employee__img"
-									src="{% static 'img/employee2.jpg' %}"
-									alt="employee__img"
-								/>
-							</div>
-							<div class="employee__box">
-								<h3 class="employee__name">Lorem ipsum dolor sit.</h3>
-								<p class="employee__info">Lorem ipsum dolor sit amet.</p>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="employee">
-							<div class="employee__imgbox">
-								<img
-									class="employee__img"
-									src="{% static 'img/employee3.jpg' %}"
-									alt="employee__img"
-								/>
-							</div>
-							<div class="employee__box">
-								<h3 class="employee__name">Lorem ipsum dolor sit.</h3>
-								<p class="employee__info">Lorem ipsum dolor sit amet.</p>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="employee">
-							<div class="employee__imgbox">
-								<img
-									class="employee__img"
-									src="{% static 'img/employee4.jpg' %}"
-									alt="employee__img"
-								/>
-							</div>
-							<div class="employee__box">
-								<h3 class="employee__name">Lorem ipsum dolor sit.</h3>
-								<p class="employee__info">Lorem ipsum dolor sit amet.</p>
-							</div>
-						</div>
-					</div>
+				    {% for work in works %}
+					    <div class="swiper-slide">
+                            <div class="employee">
+                                <div class="employee__imgbox">
+                                {% if work.photo %}
+                                    <img class="employee__img" src="{{work.photo.url}}" alt="employee__img"/>
+                                {% else %}
+                                    <img class="employee__img" src="{% static 'img/employee1.jpg' %}" alt="employee__img"/>
+                                {% endif %}
+							    </div>
+							    <div class="employee__box">
+								    <h3 class="employee__name">{{ work.title|safe}}</h3>
+								    <p class="employee__info">{{ work.totle|safe}}</p>
+							    </div>
+						    </div>
+					    </div>
+                    {% endfor %}
 				</div>
-
-				<div class="employee__button employee__button--prev">
+                <div class="employee__button employee__button--prev">
 					<i class="fas fa-chevron-left"></i>
 				</div>
 				<div class="employee__button employee__button--next">
 					<i class="fas fa-chevron-right"></i>
 				</div>
+            
 			</div>
 		</div>
 		<!-- * stats -->
@@ -416,13 +332,13 @@
 									<a class="footer__link" href="#">Biz haqimizda</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="projects.html">Loyihalar</a>
+									<a class="footer__link" href="{% url 'projects' %}">Loyihalar</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="services.html">Xizmatlar</a>
+									<a class="footer__link" href="{% url 'services' %}">Xizmatlar</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="news.html">Yangiliklar</a>
+									<a class="footer__link" href="{% url 'news' %}">Yangiliklar</a>
 								</li>
 							</ul>
 						</div>

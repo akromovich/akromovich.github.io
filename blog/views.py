@@ -1,7 +1,7 @@
 from django.http import HttpResponse
-from django.shortcuts import render
-from .models import Post,Work,Articles
-from .forms import ArticlesForm
+from django.shortcuts import render,redirect
+from .models import Post,Work,Articles,Contacts,News,Aboutcomp
+from .forms import ArticlesForm,ContactsForm
 
 
 def index(request):
@@ -13,21 +13,45 @@ def index(request):
 
 
 def about(request):
-	return render(request,'blog/about.html')
+	work = Work.objects.all()
+	about = Aboutcomp.objects.all()[:2]
+	context = {
+		"works":work,
+		'abouts':about
+	}
+	return render(request,'blog/about.html',context)
 
 def contacts(request):
-	return render(request,'blog/contact.html')
+	form = ContactsForm()
+	error = ''
+	if request.method == 'POST':
+		form = ContactsForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('contacts')
+		else:
+			error = "Форма была неверной"
+	context = {
+		'error': error,
+		'form': form
+	}
+	return render(request,'blog/contact.html',context)
 
 def news(request):
-	return render(request,'blog/news.html')
+	newsi = News.objects.all().order_by('-date')[:10]
+	context = {
+		'news':newsi,
+	}
+	return render(request,'blog/news.html',context)
 
 def project(request,pk):
-	art = Articles.objects.all()
+	art = Articles.objects.all().order_by('-date')
 	error = ''
 	if request.method == 'POST':
 		form = ArticlesForm(request.POST)
 		if form.is_valid():
 			form.save()
+
 		else:
 			error = "Форма была неверной"
 
@@ -43,8 +67,10 @@ def project(request,pk):
 
 def projects(request):
 	posts = Post.objects.all()
+	pipi =  Post.objects.all()[:3]
 	context = {
-		'posts':posts
+		'posts':posts,
+		'pipis':pipi
 	}
 	return render(request,'blog/projects.html',context)
 

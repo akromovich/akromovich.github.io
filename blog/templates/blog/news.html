@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -65,41 +66,20 @@
 					</li>
 					</li>
 				</ul>
-				<div class="nav__dropdown">
-					<button class="nav__lang langclick">
-						<img
-							class="lang__img langclick"
-							src="{% static 'img/uzb_flag_logo.jpg' %}"
-							alt=" "
-						/>
-						<span class="lang__text langclick">Uz</span>
-						<i class="fas fa-chevron-down langclick"></i>
-					</button>
-					<ul class="nav__list nav__list--langs">
-						<li class="nav__item lang">
-							<a class="nav__link tick" href="#" data-id="uz">
-								<img
-									class="lang__img tick"
-									src="{% static 'img/uzb_flag_logo.jpg' %}"
-									alt=" "
-									data-id="uz"
-								/>
-								<span class="lang__text tick" data-id="uz">Uz</span>
-							</a>
-						</li>
-						<li class="nav__item lang">
-							<a class="nav__link tick" href="#" data-id="ru">
-								<img
-									class="lang__img tick"
-									src="{% static 'img/russia_flag_logo0.jpg' %}"
-									alt=" "
-									data-id="ru"
-								/>
-								<span class="lang__text tick" data-id="ru">Ru</span>
-							</a>
-						</li>
-					</ul>
-				</div>
+				<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select name="language">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="Go">
+                </form>
 			</div>
 		</nav>
 		<!-- * news -->
@@ -107,81 +87,16 @@
 			<div class="news">
 				<h1 class="news__title">Yangiliklar</h1>
 				<div class="news__articles">
-					<div class="news__article">
-						<img class="news__img" src="{% static 'img/project.jpg' %}" alt="news img" />
+					{% for new in news %}
+                    <div class="news__article">
+						<img class="news__img" src="{{new.photo.url}}" alt="news img" />
 						<div class="news__content">
-							<h2 class="news__article-title">News Title</h2>
-							<p class="news__text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-								aspernatur mollitia quo earum repudiandae, nemo molestiae
-								corrupti error adipisci molestias impedit aperiam odit, est
-								voluptates voluptate veniam assumenda saepe dolores tempora
-								laudantium laboriosam ipsa nobis et illo. Enim ea id corrupti
-								ratione exercitationem cupiditate pariatur?
-							</p>
-							<div class="news__date">08.02.2022</div>
+							<h2 class="news__article-title">{{ new.title|safe}}</h2>
+							<p class="news__text">{{ new.text|safe }}</p>
+							<div class="news__date"></div>
 						</div>
 					</div>
-					<div class="news__article">
-						<img class="news__img" src="{% static 'img/project.jpg' %}" alt="news img" />
-						<div class="news__content">
-							<h2 class="news__article-title">News Title</h2>
-							<p class="news__text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-								aspernatur mollitia quo earum repudiandae, nemo molestiae
-								corrupti error adipisci molestias impedit aperiam odit, est
-								voluptates voluptate veniam assumenda saepe dolores tempora
-								laudantium laboriosam ipsa nobis et illo. Enim ea id corrupti
-								ratione exercitationem cupiditate pariatur?
-							</p>
-							<div class="news__date">08.02.2022</div>
-						</div>
-					</div>
-					<div class="news__article">
-						<img class="news__img" src="{% static 'img/project.jpg' %}" alt="news img" />
-						<div class="news__content">
-							<h2 class="news__article-title">News Title</h2>
-							<p class="news__text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-								aspernatur mollitia quo earum repudiandae, nemo molestiae
-								corrupti error adipisci molestias impedit aperiam odit, est
-								voluptates voluptate veniam assumenda saepe dolores tempora
-								laudantium laboriosam ipsa nobis et illo. Enim ea id corrupti
-								ratione exercitationem cupiditate pariatur?
-							</p>
-							<div class="news__date">08.02.2022</div>
-						</div>
-					</div>
-					<div class="news__article">
-						<img class="news__img" src="{% static 'img/project.jpg' %}" alt="news img" />
-						<div class="news__content">
-							<h2 class="news__article-title">News Title</h2>
-							<p class="news__text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-								aspernatur mollitia quo earum repudiandae, nemo molestiae
-								corrupti error adipisci molestias impedit aperiam odit, est
-								voluptates voluptate veniam assumenda saepe dolores tempora
-								laudantium laboriosam ipsa nobis et illo. Enim ea id corrupti
-								ratione exercitationem cupiditate pariatur?
-							</p>
-							<div class="news__date">08.02.2022</div>
-						</div>
-					</div>
-					<div class="news__article">
-						<img class="news__img" src="{% static 'img/project.jpg' %}" alt="news img" />
-						<div class="news__content">
-							<h2 class="news__article-title">News Title</h2>
-							<p class="news__text">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-								aspernatur mollitia quo earum repudiandae, nemo molestiae
-								corrupti error adipisci molestias impedit aperiam odit, est
-								voluptates voluptate veniam assumenda saepe dolores tempora
-								laudantium laboriosam ipsa nobis et illo. Enim ea id corrupti
-								ratione exercitationem cupiditate pariatur?
-							</p>
-							<div class="news__date">08.02.2022</div>
-						</div>
-					</div>
+                    {% endfor %}
 				</div>
 			</div>
 		</div>
@@ -228,16 +143,16 @@
 							<h3 class="footer__links--title">Ma'lumot</h3>
 							<ul class="footer__list">
 								<li class="footer__item">
-									<a class="footer__link" href="about.html">Biz haqimizda</a>
+									<a class="footer__link" href="#">Biz haqimizda</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="projects.html">Loyihalar</a>
+									<a class="footer__link" href="{% url 'projects' %}">Loyihalar</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="services.html">Xizmatlar</a>
+									<a class="footer__link" href="{% url 'services' %}">Xizmatlar</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="#">Yangiliklar</a>
+									<a class="footer__link" href="{% url 'news' %}">Yangiliklar</a>
 								</li>
 							</ul>
 						</div>
