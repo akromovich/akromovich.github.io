@@ -118,11 +118,12 @@ USE_I18N = True
 
 USE_TZ = True
 LANGUAGES = [
-    ('ru', _('Russian')),
     ('uz', _('Uzbek')),
+    ('ru', _('Russian')),
+    ('en', _('English')),
 ]
-MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
-MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'uz'
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'uz'
+MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'ru'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/

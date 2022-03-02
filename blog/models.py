@@ -19,6 +19,7 @@ class Post(models.Model):
 class Work(models.Model):
     title = models.CharField(max_length=30,verbose_name="Имя фамилие работающих людей",null=False,blank=False)
     totle = models.CharField(max_length=50,verbose_name="должность",null=False,blank=False)
+    tel_number = models.CharField(max_length=20,verbose_name="Номера сотрудников",null=False,blank=False)
     photo = models.ImageField(upload_to='post_images',null=False,blank=False,verbose_name="Фоторафия сотрудника")
 
     class Meta:
