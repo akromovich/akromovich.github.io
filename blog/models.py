@@ -4,8 +4,8 @@ import datetime
 now = datetime.date.today()
 
 class Post(models.Model):
-    title=models.CharField(max_length=200,blank=False,verbose_name='Название статьи')
-    text=RichTextUploadingField(max_length=1000,blank=False,verbose_name='текст')
+    title=models.CharField(max_length=10000,blank=False,verbose_name='Название статьи')
+    text=RichTextUploadingField(max_length=10000,blank=False,verbose_name='текст')
     photo = models.ImageField(upload_to='post_images',null=False,blank=False,verbose_name="выбрать фото")
     date = models.DateTimeField(auto_now_add=True)
 

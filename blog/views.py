@@ -67,7 +67,7 @@ def project(request,pk):
 
 def projects(request):
 	posts = Post.objects.all()
-	pipi =  Post.objects.all()[:3]
+	pipi = Post.objects.all()[:3]
 	context = {
 		'posts':posts,
 		'pipis':pipi
