@@ -106,24 +106,109 @@
 		<!-- * other projects -->
 		<div class="container">
 			<h2 class="ops__title">Boshqa Loyihalar</h2>
-            {% for post in posts %}
-                <div class="ops">
-                    <div class="op">
-					    {% if post.photo %}
-                            <img class="op__img" src="{{post.photo.url}}" alt="gallery img" />
-                        {% else %}
-                            <img class="op__img" src="{% static 'img/gallery.jpg' %}" alt="gallery img" />
-                        {% endif %}
-
-					    <a class="op__content op__inner" href="{% url 'project' post.pk %}">
-						    <h3 class="op__name">{{ post.title|safe|truncatechars:40 }}</h3>
-						    <div class="op__category">{{ post.text|safe|truncatechars:40 }}</div>
-					    </a>
-				    </div>
-
-            </div>
-            {% endfor %}
-        </div>
+			<div class="ops">
+                {% for post in posts %}
+				<div class="op">
+					<img class="op__img" src="{{post.photo.url}}" alt="gallery img" />
+					<a class="op__content op__inner" href="{% url 'project' post.pk %}">
+						<h3 class="op__name">{{ post.title|safe}}</h3>
+						<div class="op__category">{{ post.text|safe}}</div>
+					</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<!-- * footer -->
+		<div class="footer">
+			<div class="footer__content">
+				<div class="container">
+					<div class="footer__top">
+						<div class="footer__contacts">
+							<a class="footer__brand" href="#">
+								<img
+									class="footer__logo"
+									src="../img/footer_logo.png"
+									alt="footer logo"
+								/>
+							</a>
+							<div class="footer__line"></div>
+							<div class="footer__contactbox">
+								<a class="footer__contact" href="tel:+998 99 123 45 67">
+									<i class="fas fa-phone-alt footer__contact--icon"></i>
+									<span class="footer__contact--text">+998 99 123 45 67</span>
+								</a>
+							</div>
+							<div class="footer__contactbox">
+								<a class="footer__contact" href="mailto:info@archdesign.uz">
+									<i class="fas fa-envelope footer__contact--icon"></i>
+									<span class="footer__contact--text">info@archdesign.uz</span>
+								</a>
+							</div>
+							<div class="footer__contactbox">
+								<a
+									class="footer__contact"
+									href="https://www.google.com/maps/search/+%D0%B3.+%D0%A2%D0%B5%D1%80%D0%BC%D0%B5%D0%B7,/@37.2290345,67.2694544,18.74z"
+									target="_blank"
+								>
+									<i class="fas fa-map-marker-alt footer__contact--icon"></i>
+									<span class="footer__contact--text"
+										>г. Термез, ул. Шукрона, дом 15д</span
+									>
+								</a>
+							</div>
+						</div>
+						<div class="footer__links">
+							<h3 class="footer__links--title">Ma'lumot</h3>
+							<ul class="footer__list">
+								<li class="footer__item">
+									<a class="footer__link" href="about.html">Biz haqimizda</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="#">Loyihalar</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="services.html">Xizmatlar</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="news.html">Yangiliklar</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom-wrap">
+					<div class="container">
+						<div class="footer__bottom">
+							<div class="footer__copyright">
+								© 2022 Arch & Design Service, Все права защищены
+							</div>
+							<ul class="footer__social">
+								<li class="footer__social--item">
+									<a class="footer__social--link" href="#">
+										<i class="fab fa-facebook-f footer__social--icon"></i>
+									</a>
+								</li>
+								<li class="footer__social--item">
+									<a class="footer__social--link" href="#">
+										<i class="fab fa-telegram-plane footer__social--icon"></i>
+									</a>
+								</li>
+								<li class="footer__social--item">
+									<a class="footer__social--link" href="#">
+										<i class="fab fa-instagram footer__social--icon"></i>
+									</a>
+								</li>
+								<li class="footer__social--item">
+									<a class="footer__social--link" href="#">
+										<i class="fab fa-youtube footer__social--icon"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- * footer -->
 
 		<!-- * menu curtain -->
