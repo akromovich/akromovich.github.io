@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 {% load i18n %}
+
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -53,7 +54,7 @@
 						</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'index' %}">Bosh sahifa</a>
+						<a class="nav__link" href="{% url 'index' %}">{% trans 'Bosh sahifa' %}</a>
 					</li>
 					<li class="nav__item">
 						<a class="nav__link" href="{% url 'about' %}">Biz haqimizda</a>
@@ -83,9 +84,10 @@
                             </option>
                         {% endfor %}
                     </select>
+
                     <input type="submit" value="Go">
                 </form>
-			</div>
+            </div>
 		</nav>
 		<!-- ! location to be smooth scrolled to -->
 		<div id="smooth"></div>
