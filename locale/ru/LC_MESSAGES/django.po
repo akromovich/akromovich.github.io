@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-09 00:44+0500\n"
+"POT-Creation-Date: 2022-03-09 18:20+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,3 +35,86 @@ msgstr "Английский"
 #: .\blog\templates\blog\index.html:57
 msgid "Bosh sahifa"
 msgstr "Главная страница"
+
+#: .\blog\templates\blog\index.html:60 .\blog\templates\blog\index.html:151
+msgid "Biz haqimizda"
+msgstr ""
+
+#: .\blog\templates\blog\index.html:63
+msgid "Loyihalar"
+msgstr ""
+
+#: .\blog\templates\blog\index.html:66
+msgid "Xizmatlar"
+msgstr ""
+
+#: .\blog\templates\blog\index.html:69
+msgid "Yangiliklar"
+msgstr ""
+
+#: .\blog\templates\blog\index.html:72
+msgid "Boglanish"
+msgstr ""
+
+#: .\blog\templates\blog\index.html:104 .\blog\templates\blog\index.html:116
+#: .\blog\templates\blog\index.html:128
+msgid "Bizning xizmatlarimiz"
+msgstr ""
+
+#: .\blog\templates\blog\index.html:106
+msgid ""
+"Ichki va tashqi dizayn Peyzajuy-joy, fuqarolik, sanoat suv xojaligi, qishloq "
+"xojaligimaqsadlarida obektlar va majmualarni qurish uchun loyiha-smeta "
+"hujjatlarini ishlab chiqish,shu jumladan ularning muhandislik tizimlarini "
+"loyihalash."
+msgstr ""
+
+#: .\blog\templates\blog\index.html:118
+msgid ""
+"Qurilish obektlarini kapital va joriy tamirlash uchun loyiha-smeta "
+"hujjatlari."
+msgstr ""
+
+#: .\blog\templates\blog\index.html:130
+msgid ""
+"Arxitektura yodgorliklarini restavratsiya qilish uchun hujjatlar Bino va "
+"inshootlarning muhandislik tarmoqlari va tizimlarini loyihalash va "
+"mualliflik nazorati."
+msgstr ""
+
+#: .\blog\templates\blog\index.html:148
+msgid ""
+"“Arch design Service” kompaniyasi 2017-yilda tashkil etilgan bo‘lib, "
+"arxitektura-qurilish vazifalarini kompleks ishlab chiqish asosida qurilish "
+"sohasida  loyiha yechimlarini amalga oshirishga ixtisoslashgan. Bugun biz "
+"mijozlarimizga turar-joy majmualari, davlat, maʼmuriy, maxsus obʼyektlardan "
+"tortib  dala uylari va interyerigacha boʻlgan dizayn va dizayn "
+"xizmatlarining toʻliq spektrini taklif etamiz. Biz ustuvor strategik "
+"tamoyilga amal qilgan holda eskizdan tortib arxitektura nazoratigacha "
+"bo‘lgan yirik, murakkab, ilm-fanni talab qiluvchi loyihalarni yuqori sifat "
+"va maqbul narxlarda amalga oshiramiz."
+msgstr ""
+
+#: .\blog\templates\blog\index.html:160
+msgid ""
+"Bizning vazifamiz Bizning maqsadimiz – mijozning investitsiya niyati va "
+"xalqaro standartlar talablarini hisobga olgan holda, barcha zamonaviy "
+"texnologiyalar, fan yutuqlari, dizayn san’ati, etika, estetikadan "
+"foydalangan holda xavfsiz, samarali va yuqori texnologiyali loyihani ishlab "
+"chiqish va amalga oshirishdir. Loyihalash, qurilish va bosh pudrat ishlarini "
+"bajarishda Buyurtmachining moliyaviy resurslaridan oqilona foydalanishni "
+"ta’minlagan holda, taklif etilayotgan xizmatlar turlarini doimiy ravishda "
+"rivojlantirish, takomillashtirish va kengaytirishga intilamiz."
+msgstr ""
+
+#: .\blog\templates\blog\index.html:162
+msgid "Batafsil"
+msgstr ""
+
+#: .\blog\templates\blog\index.html:175
+msgid "Bizning ish jarayonimiz"
+msgstr ""
+
+#: .\blog\templates\blog\index.html:183
+msgid "Saytda sorov qoldiring yoki qongiroq qiling"
+msgstr ""
