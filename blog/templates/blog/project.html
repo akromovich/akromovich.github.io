@@ -117,7 +117,7 @@
                 <hr>
             {% endfor %}
 			<!-- ! comment form -->
-			<h2 class="comments__form-title">Uzingizni izohingizni koldiring</h2>
+			<h2 class="comments__form-title">{% trans 'Uzingizni izohingizni koldiring' %}</h2>
 			<form class="comments__form" method="post">
 				{% csrf_token %}
                 <div class="comments__inputs">
@@ -127,8 +127,8 @@
 				    {{ forms.text }}
                     <span> {{ error }}</span>
 				<div class="comments__btnbox">
-					<button class="comments__btn" type="submit">Yuborish</button>
-				    <button class="contacts__btn"  type="reset">Qayta yozish</button>
+					<button class="comments__btn" type="submit">{% trans 'Yuborish' %}</button>
+				    <button class="contacts__btn"  type="reset">{% trans 'Qayta yozish' %}</button>
                 </div>
 			</form>
 		</div>

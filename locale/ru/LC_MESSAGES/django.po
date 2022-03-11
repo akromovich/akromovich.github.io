@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-10 23:30+0500\n"
+"POT-Creation-Date: 2022-03-11 17:54+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -124,8 +124,7 @@ msgid ""
 "holda eskizdan tortib arxitektura nazoratigacha bo‘lgan yirik,murakkab, ilm-"
 "fanni talab qiluvchi loyihalarni yuqori sifat va maqbul narxlarda amalga "
 "oshiramiz."
-msgstr ""
-"«Арх Дизайн Сервис был основан в 2017 году»,«Строительство на основе "
+msgstr "«Арх Дизайн Сервис был основан в 2017 году»,«Строительство на основе "
 "комплексной разработки архитектурно-строительных заданий»специализируется на "
 "реализации проектных решений в сфере. Сегодня мынашим клиентам из жилых "
 "комплексов, государственных, административных, специальных объектовДизайн и "
@@ -136,72 +135,79 @@ msgstr ""
 
 #: .\blog\templates\blog\about.html:121
 msgid "Nega aynan biz"
-msgstr ""
+msgstr "Почему именно мы"
+
+#: .\blog\templates\blog\about.html:128
+msgid "MUHANDISLIK"
+msgstr "ИНЖЕНЕРИЯ"
 
 #: .\blog\templates\blog\about.html:130
 msgid ""
 "Texnik-iqtisodiy asos – Loyihalash loyihasi – Loyiha – Batafsil loyihalash – "
 "Ishchi hujjatlar"
-msgstr ""
+msgstr "ТЭО-Дизайн-Проект-Проект-Рабочий Проект-»«Рабочие документы»."
 
 #: .\blog\templates\blog\about.html:139
 msgid "LOYIHA BOSHQARUVI"
-msgstr ""
+msgstr "УПРАВЛЕНИЕ ПРОЕКТОМ"
 
 #: .\blog\templates\blog\about.html:141
 msgid ""
 "Rejalashtirish va ishni tashkil qilish, byudjetni tuzish, logistika – "
 "tizimlarni mijozga etkazib berish"
 msgstr ""
+"Планирование и организация работы, бюджетирование, логистика - »поставка "
+"систем заказчику"
 
 #: .\blog\templates\blog\about.html:150
 msgid "TEXNIK XIZMAT KORSATISH"
-msgstr ""
+msgstr "ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ"
 
 #: .\blog\templates\blog\about.html:152
 msgid ""
 "Uskunalar va materiallarni o’rnatish – ishga tushirish ishlari – texnik "
 "yordam"
-msgstr ""
+msgstr "Монтаж оборудования и материалов - пуско-наладка - технический »помощь"
 
 #: .\blog\templates\blog\about.html:203
 msgid "Ofis binolari"
-msgstr ""
+msgstr "Офисные здания"
 
 #: .\blog\templates\blog\about.html:210
 msgid "Bolalar bog’chalari"
-msgstr ""
+msgstr "Детские сады"
 
 #: .\blog\templates\blog\about.html:217
 msgid "Mehmonxonalar"
-msgstr ""
+msgstr "Отели"
 
 #: .\blog\templates\blog\about.html:224
 msgid "Dam olish majmualari"
-msgstr ""
+msgstr "Комплексы отдыха"
 
 #: .\blog\templates\blog\about.html:231
 msgid "Zavod va Fabrikalar"
-msgstr ""
+msgstr "Заводы и Фабрики"
 
 #: .\blog\templates\blog\about.html:238
 msgid "Savdo markazlari"
-msgstr ""
+msgstr "Торговые центры"
 
 #: .\blog\templates\blog\about.html:245
 msgid "Turar-joy majmualari"
-msgstr ""
+msgstr "Жилые комплексы"
 
 #: .\blog\templates\blog\about.html:252
 msgid "Maktablar"
-msgstr ""
+msgstr "Школы"
 
 #: .\blog\templates\blog\about.html:296 .\blog\templates\blog\contact.html:217
-#: .\blog\templates\blog\news.html:143 .\blog\templates\blog\project.html:175
+#: .\blog\templates\blog\index.html:263 .\blog\templates\blog\news.html:143
+#: .\blog\templates\blog\project.html:175
 #: .\blog\templates\blog\projects.html:161
 #: .\blog\templates\blog\services.html:222
 msgid "Malumot"
-msgstr ""
+msgstr "Данные"
 
 #: .\blog\templates\blog\contact.html:86
 #, fuzzy
@@ -211,23 +217,25 @@ msgstr "Связатся"
 
 #: .\blog\templates\blog\contact.html:88
 msgid "Xabar yuborish"
-msgstr ""
+msgstr "Отправить"
 
 #: .\blog\templates\blog\contact.html:107
+#: .\blog\templates\blog\project.html:130
 msgid "Yuborish"
-msgstr ""
+msgstr "Отправить"
 
 #: .\blog\templates\blog\contact.html:108
+#: .\blog\templates\blog\project.html:131
 msgid "Qayta yozish"
-msgstr ""
+msgstr "Сбросить"
 
 #: .\blog\templates\blog\contact.html:114
 msgid "Ofis"
-msgstr ""
+msgstr "Офис"
 
 #: .\blog\templates\blog\contact.html:141
 msgid "Kadrlar bolimi"
-msgstr ""
+msgstr "Отдел кадров"
 
 #: .\blog\templates\blog\index.html:104 .\blog\templates\blog\index.html:116
 #: .\blog\templates\blog\index.html:128 .\blog\templates\blog\services.html:87
@@ -318,19 +326,23 @@ msgstr "Оставьте заявку на сайте или позвоните"
 
 #: .\blog\templates\blog\index.html:192
 msgid "Menejer sizning kurilish obyektingizni bepul olchash uchun yozadi"
-msgstr ""
+msgstr "Менеджер пишет для бесплатного замера вашего строительного объекта"
 
 #: .\blog\templates\blog\index.html:201
 msgid "Mutaxassis keladi, sizga maslahat beradi va olchov qiladi"
-msgstr ""
+msgstr "Приедет специалист, проконсультирует и сделает замеры"
 
 #: .\blog\templates\blog\index.html:210
 msgid "Loyihani muhokama qilish, Shartnoma tuzish, Oldindan tolov"
-msgstr ""
+msgstr "Обсуждение проекта, заключение договора, предоплата"
 
 #: .\blog\templates\blog\index.html:218
 msgid "Obektni etkazib berish, Yakuniy tolov"
-msgstr ""
+msgstr "Сдача объекта, Окончательный расчет"
+
+#: .\blog\templates\blog\project.html:120
+msgid "Uzingizni izohingizni koldiring"
+msgstr "Оставьте свой комментарий"
 
 #: .\blog\templates\blog\projects.html:90
 #, fuzzy
@@ -346,48 +358,48 @@ msgstr "Проекты"
 
 #: .\blog\templates\blog\services.html:98
 msgid "Interyer dizayini"
-msgstr ""
+msgstr "Дизайн Интерьера"
 
 #: .\blog\templates\blog\services.html:100
 msgid "Dizayn loyihasini va 3D vizualizatsiyasini yaratish"
-msgstr ""
+msgstr "Составление дизайн проекта и 3D визуализация"
 
 #: .\blog\templates\blog\services.html:113
 msgid "Tashqi dizayn"
-msgstr ""
+msgstr "Дизайн Экстерьера"
 
 #: .\blog\templates\blog\services.html:116
 msgid "Bino jabhasining tashqi korinishini yaratish"
-msgstr ""
+msgstr "Cоздание внешнего облика фасада здания"
 
 #: .\blog\templates\blog\services.html:129
 msgid "Landshaft dizayni"
-msgstr ""
+msgstr "Ландшафтный Дизайн"
 
 #: .\blog\templates\blog\services.html:131
 msgid "Yerlarni obodonlashtirish, bog‘ va bog‘ ko‘chatlarini tashkil etish"
-msgstr ""
+msgstr "Создание благоустройства земли, организации садово-парковых насаждений"
 
 #: .\blog\templates\blog\services.html:144
 msgid "Dizayn"
-msgstr ""
+msgstr "Ландшафтный Дизайн"
 
 #: .\blog\templates\blog\services.html:146
 msgid "Moljallangan obektning prototipini yaratish"
-msgstr ""
+msgstr "Создание прототипа предполагаемого объекта"
 
 #: .\blog\templates\blog\services.html:159
 msgid "Hujjatlar"
-msgstr ""
+msgstr "Документация"
 
 #: .\blog\templates\blog\services.html:161
 msgid "Ruxsatnomalarni yigish va rasmiylashtirish"
-msgstr ""
+msgstr "Сбор и оформление разрешительной документации"
 
 #: .\blog\templates\blog\services.html:174
 msgid "Muallif nazorati"
-msgstr ""
+msgstr "Авторский Надзор"
 
 #: .\blog\templates\blog\services.html:175
 msgid "Ozaro bogliqlik uchun arxitektor bilan tekshiring"
-msgstr ""
+msgstr "Контроль со стороны архитектора за соответствием"
