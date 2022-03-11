@@ -47,22 +47,22 @@
 						</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'index' %}">Bosh sahifa</a>
+						<a class="nav__link" href="{% url 'index' %}">{% trans 'Bosh sahifa' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'about' %}">Biz haqimizda</a>
+						<a class="nav__link" href="{% url 'about' %}">{% trans 'Biz haqimizda' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'projects' %}">Loyihalar</a>
+						<a class="nav__link" href="{% url 'projects' %}">{% trans 'Loyihalar' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'services' %}">Xizmatlar</a>
+						<a class="nav__link" href="{% url 'services' %}">{% trans 'Xizmatlar' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'news' %}">Yangiliklar</a>
+						<a class="nav__link" href="{% url 'news' %}">{% trans 'Yangiliklar' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'contacts' %}">Bog'lanish</a>
+						<a class="nav__link" href="{% url 'contacts' %}">{% trans 'Boglanish' %}</a>
 					</li>
 				</ul>
 				<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
@@ -83,9 +83,9 @@
 		</nav>
 		<div class="container">
 			<div class="contacts">
-				<h1 class="contacts__title">Biz bilan bog'lanish</h1>
+				<h1 class="contacts__title">{% trans 'Biz bilan boglanish' %}</h1>
 				<div class="contacts__write">
-					<h2 class="contacts__write-title">Xabar yuborish</h2>
+					<h2 class="contacts__write-title">{% trans 'Xabar yuborish' %}</h2>
 					<form class="contacts__form" method="post" >
                         {% csrf_token %}
 						<div class="contacts__formbox">
@@ -104,14 +104,14 @@
                             <span>{{ error }}</span>
 						</div>
 						<div class="contacts__btnbox">
-							<button class="contacts__btn" type="submit">Отправить</button>
-                            <button class="contacts__btn"  type="reset">Сбросить</button>
+							<button class="contacts__btn" type="submit">{% trans 'Yuborish' %}</button>
+                            <button class="contacts__btn"  type="reset">{% trans 'Qayta yozish' %}</button>
 						</div>
 					</form>
 				</div>
 				<div class="contacts__boxes">
 					<div class="contacts__box">
-						<h2 class="contacts__box-title">Ofis</h2>
+						<h2 class="contacts__box-title">{% trans 'Ofis' %}</h2>
 						<div class="contact">
 							<a class="contact" href="tel:+998 99 123 45 67">
 								<i class="fas fa-phone-alt contact--icon"></i>
@@ -138,7 +138,7 @@
 						</div>
 					</div>
 					<div class="contacts__box">
-						<h2 class="contacts__box-title">Kadrlar bo'limi</h2>
+						<h2 class="contacts__box-title">{% trans 'Kadrlar bolimi' %}</h2>
 						<div class="contact">
 							<a class="contact" href="tel:+998 99 123 45 67">
 								<i class="fas fa-phone-alt contact--icon"></i>
@@ -214,19 +214,19 @@
 							</div>
 						</div>
 						<div class="footer__links">
-							<h3 class="footer__links--title">Ma'lumot</h3>
+							<h3 class="footer__links--title">{% trans 'Malumot'%}</h3>
 							<ul class="footer__list">
 								<li class="footer__item">
-									<a class="footer__link" href="#">Biz haqimizda</a>
+									<a class="footer__link" href="#">{% trans 'Biz haqimizda' %}</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="{% url 'projects' %}">Loyihalar</a>
+									<a class="footer__link" href="{% url 'projects' %}">{% trans 'Loyihalar' %}</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="{% url 'services' %}">Xizmatlar</a>
+									<a class="footer__link" href="{% url 'services' %}">{% trans 'Xizmatlar' %}</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="{% url 'news' %}">Yangiliklar</a>
+									<a class="footer__link" href="{% url 'news' %}">{% trans 'Yangiliklar' %}</a>
 								</li>
 							</ul>
 						</div>

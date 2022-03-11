@@ -47,22 +47,22 @@
 						</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'index' %}">Bosh sahifa</a>
+						<a class="nav__link" href="{% url 'index' %}">{% trans 'Bosh sahifa' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'about' %}">Biz haqimizda</a>
+						<a class="nav__link" href="{% url 'about' %}">{% trans 'Biz haqimizda' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'projects' %}">Loyihalar</a>
+						<a class="nav__link" href="{% url 'projects' %}">{% trans 'Loyihalar' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'services' %}">Xizmatlar</a>
+						<a class="nav__link" href="{% url 'services' %}">{% trans 'Xizmatlar' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'news' %}">Yangiliklar</a>
+						<a class="nav__link" href="{% url 'news' %}">{% trans 'Yangiliklar' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'contacts' %}">Bog'lanish</a>
+						<a class="nav__link" href="{% url 'contacts' %}">{% trans 'Boglanish' %}</a>
 					</li>
 					</li>
 				</ul>
@@ -87,7 +87,7 @@
 		<!-- * projects -->
 
         <div class="projects">
-			<h1 class="projects__title">Bizning loyihalarimiz</h1>
+			<h1 class="projects__title">{% trans 'Bizning loyihalarimiz' %}</h1>
 			{% for pipi in pipis %}
             <div class="project">
 				<div class="project__info project__info--left">
@@ -105,7 +105,7 @@
 		</div>
 		<!-- * other projects -->
 		<div class="container">
-			<h2 class="ops__title">Boshqa Loyihalar</h2>
+			<h2 class="ops__title">{% trans 'Boshqa Loyihalar' %}</h2>
 			<div class="ops">
                 {% for post in posts %}
 				<div class="op">
@@ -158,19 +158,19 @@
 							</div>
 						</div>
 						<div class="footer__links">
-							<h3 class="footer__links--title">Ma'lumot</h3>
+							<h3 class="footer__links--title">{% trans 'Malumot' %}</h3>
 							<ul class="footer__list">
 								<li class="footer__item">
-									<a class="footer__link" href="about.html">Biz haqimizda</a>
+									<a class="footer__link" href="about.html">{% trans 'Biz haqimizda' %}</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="#">Loyihalar</a>
+									<a class="footer__link" href="#">{% trans 'Loyihalar' %}</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="services.html">Xizmatlar</a>
+									<a class="footer__link" href="services.html">{% trans 'Xizmatlar' %}</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="news.html">Yangiliklar</a>
+									<a class="footer__link" href="news.html">{% trans 'Yangiliklar' %}</a>
 								</li>
 							</ul>
 						</div>

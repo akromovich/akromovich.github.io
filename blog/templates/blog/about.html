@@ -51,22 +51,22 @@
 						</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'index' %}">Bosh sahifa</a>
+						<a class="nav__link" href="{% url 'index' %}">{% trans 'Bosh sahifa' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'about' %}">Biz haqimizda</a>
+						<a class="nav__link" href="{% url 'about' %}">{% trans 'Biz haqimizda' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'projects' %}">Loyihalar</a>
+						<a class="nav__link" href="{% url 'projects' %}">{% trans 'Loyihalar' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'services' %}">Xizmatlar</a>
+						<a class="nav__link" href="{% url 'services' %}">{% trans 'Xizmatlar' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'news' %}">Yangiliklar</a>
+						<a class="nav__link" href="{% url 'news' %}">{% trans 'Yangiliklar' %}</a>
 					</li>
 					<li class="nav__item">
-						<a class="nav__link" href="{% url 'contacts' %}">Bog'lanish</a>
+						<a class="nav__link" href="{% url 'contacts' %}">{% trans 'Boglanish' %}</a>
 					</li>
 				</ul>
 				<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
@@ -90,15 +90,9 @@
 		<!-- * about home -->
 		<div class="about__home">
 			<div class="about__home-content">
-				<h2 class="about__home-title">Korxonamiz haqida</h2>
+				<h2 class="about__home-title">{% trans 'Korxonamiz haqida' %}</h2>
 				<p class="about__home-text">
-					“Arch design Service” kompaniyasi 2017-yilda tashkil etilgan bo‘lib,
-                    arxitektura-qurilish vazifalarini kompleks ishlab chiqish asosida qurilish sohasida
-                    loyiha yechimlarini amalga oshirishga ixtisoslashgan.
-                    Bugun biz mijozlarimizga turar-joy majmualari, davlat, maʼmuriy, maxsus obʼyektlardan tortib
-                    dala uylari va interyerigacha boʻlgan dizayn va dizayn xizmatlarining toʻliq spektrini taklif etamiz.
-                    Biz ustuvor strategik tamoyilga amal qilgan holda eskizdan tortib arxitektura nazoratigacha bo‘lgan yirik,
-                    murakkab, ilm-fanni talab qiluvchi loyihalarni yuqori sifat va maqbul narxlarda amalga oshiramiz.
+                    {% trans '“Arch design Service” kompaniyasi 2017-yilda tashkil etilgan bo‘lib,arxitektura-qurilish vazifalarini kompleks ishlab chiqish asosida qurilish sohasidaloyiha yechimlarini amalga oshirishga ixtisoslashgan.Bugun biz mijozlarimizga turar-joy majmualari, davlat, maʼmuriy, maxsus obʼyektlardan tortibdala uylari va interyerigacha boʻlgan dizayn va dizayn xizmatlarining toʻliq spektrini taklif etamiz.Biz ustuvor strategik tamoyilga amal qilgan holda eskizdan tortib arxitektura nazoratigacha bo‘lgan yirik,murakkab, ilm-fanni talab qiluvchi loyihalarni yuqori sifat va maqbul narxlarda amalga oshiramiz.' %}
 				</p>
 			</div>
 		</div>
@@ -124,7 +118,7 @@
 		<div class="why">
 			<div class="container">
 				<div class="why__content">
-					<h2 class="why__title">Nega aynan biz?!</h2>
+					<h2 class="why__title">{% trans 'Nega aynan biz' %}?!</h2>
 					<div class="why__boxes">
 						<div class="why__box">
 							<div class="why__iconbox">
@@ -133,7 +127,7 @@
 							<div class="why__textbox">
 								<h3>MUHANDISLIK</h3>
 								<p>
-									Texnik-iqtisodiy asos – Loyihalash loyihasi – Loyiha – Batafsil loyihalash – Ishchi hujjatlar
+                                    {% trans 'Texnik-iqtisodiy asos – Loyihalash loyihasi – Loyiha – Batafsil loyihalash – Ishchi hujjatlar' %}
 								</p>
 							</div>
 						</div>
@@ -142,9 +136,9 @@
 								<i class="fas fa-gem why__icon"></i>
 							</div>
 							<div class="why__textbox">
-								<h3>LOYIHA BOSHQARUVI</h3>
+								<h3>{% trans 'LOYIHA BOSHQARUVI' %}</h3>
 								<p>
-									Rejalashtirish va ishni tashkil qilish, byudjetni tuzish, logistika – tizimlarni mijozga etkazib berish
+                                    {% trans 'Rejalashtirish va ishni tashkil qilish, byudjetni tuzish, logistika – tizimlarni mijozga etkazib berish' %}
 								</p>
 							</div>
 						</div>
@@ -153,9 +147,9 @@
 								<i class="fas fa-lightbulb why__icon"></i>
 							</div>
 							<div class="why__textbox">
-								<h3>TEXNIK XIZMAT KO'RSATISH</h3>
+								<h3>{% trans 'TEXNIK XIZMAT KORSATISH' %}</h3>
 								<p>
-									Uskunalar va materiallarni o’rnatish – ishga tushirish ishlari – texnik yordam
+                                    {% trans 'Uskunalar va materiallarni o’rnatish – ishga tushirish ishlari – texnik yordam' %}
 								</p>
 							</div>
 						</div>
@@ -206,56 +200,56 @@
 						<i class="fas fa-hard-hat"></i>
 					</div>
 					<h2 class="stat__num">32</h2>
-					<div class="stat__name">Ofis binolari</div>
+					<div class="stat__name">{% trans 'Ofis binolari' %}</div>
 				</div>
 				<div class="stat">
 					<div class="stat__img">
 						<i class="fas fa-hard-hat"></i>
 					</div>
 					<h2 class="stat__num">17</h2>
-					<div class="stat__name">Bolalar bog’chalari</div>
+					<div class="stat__name">{% trans 'Bolalar bog’chalari' %}</div>
 				</div>
 				<div class="stat">
 					<div class="stat__img">
 						<i class="fas fa-hard-hat"></i>
 					</div>
 					<h2 class="stat__num">7</h2>
-					<div class="stat__name">Mehmonxonalar</div>
+					<div class="stat__name">{% trans 'Mehmonxonalar' %}</div>
 				</div>
 				<div class="stat">
 					<div class="stat__img">
 						<i class="fas fa-hard-hat"></i>
 					</div>
 					<h2 class="stat__num">6</h2>
-					<div class="stat__name">Dam olish majmualari</div>
+					<div class="stat__name">{% trans 'Dam olish majmualari' %}</div>
 				</div>
 				<div class="stat">
 					<div class="stat__img">
 						<i class="fas fa-hard-hat"></i>
 					</div>
 					<h2 class="stat__num">8</h2>
-					<div class="stat__name">Zavod va Fabrikalar</div>
+					<div class="stat__name">{% trans 'Zavod va Fabrikalar' %}</div>
 				</div>
 				<div class="stat">
 					<div class="stat__img">
 						<i class="fas fa-hard-hat"></i>
 					</div>
 					<h2 class="stat__num">4</h2>
-					<div class="stat__name">Savdo markazlari</div>
+					<div class="stat__name">{% trans 'Savdo markazlari' %}</div>
 				</div>
 				<div class="stat">
 					<div class="stat__img">
 						<i class="fas fa-hard-hat"></i>
 					</div>
 					<h2 class="stat__num">16</h2>
-					<div class="stat__name">Turar-joy majmualari</div>
+					<div class="stat__name">{% trans 'Turar-joy majmualari' %}</div>
 				</div>
 				<div class="stat">
 					<div class="stat__img">
 						<i class="fas fa-hard-hat"></i>
 					</div>
 					<h2 class="stat__num">23</h2>
-					<div class="stat__name">Maktablar</div>
+					<div class="stat__name">{% trans 'Maktablar' %}</div>
 				</div>
 			</div>
 		</div>
@@ -299,19 +293,19 @@
 							</div>
 						</div>
 						<div class="footer__links">
-							<h3 class="footer__links--title">Ma'lumot</h3>
+							<h3 class="footer__links--title">{% trans 'Malumot'%}</h3>
 							<ul class="footer__list">
 								<li class="footer__item">
-									<a class="footer__link" href="#">Biz haqimizda</a>
+									<a class="footer__link" href="#">{% trans 'Biz haqimizda' %}</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="{% url 'projects' %}">Loyihalar</a>
+									<a class="footer__link" href="{% url 'projects' %}">{% trans 'Loyihalar' %}</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="{% url 'services' %}">Xizmatlar</a>
+									<a class="footer__link" href="{% url 'services' %}">{% trans 'Xizmatlar' %}</a>
 								</li>
 								<li class="footer__item">
-									<a class="footer__link" href="{% url 'news' %}">Yangiliklar</a>
+									<a class="footer__link" href="{% url 'news' %}">{% trans 'Yangiliklar' %}</a>
 								</li>
 							</ul>
 						</div>
