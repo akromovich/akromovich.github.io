@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-11 17:54+0500\n"
+"POT-Creation-Date: 2022-03-11 20:40+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,26 +94,13 @@ msgstr "Новости"
 #: .\blog\templates\blog\project.html:65 .\blog\templates\blog\projects.html:65
 #: .\blog\templates\blog\services.html:65
 msgid "Boglanish"
-msgstr "Связатся"
+msgstr "Связаться"
 
 #: .\blog\templates\blog\about.html:93
-#, fuzzy
-#| msgid "Biz haqimizda"
 msgid "Korxonamiz haqida"
 msgstr "О нас"
 
 #: .\blog\templates\blog\about.html:95
-#, fuzzy
-#| msgid ""
-#| "“Arch design Service” kompaniyasi 2017-yilda tashkil etilgan bo‘lib, "
-#| "arxitektura-qurilish vazifalarini kompleks ishlab chiqish asosida "
-#| "qurilish sohasida  loyiha yechimlarini amalga oshirishga ixtisoslashgan. "
-#| "Bugun biz mijozlarimizga turar-joy majmualari, davlat, maʼmuriy, maxsus "
-#| "obʼyektlardan tortib  dala uylari va interyerigacha boʻlgan dizayn va "
-#| "dizayn xizmatlarining toʻliq spektrini taklif etamiz. Biz ustuvor "
-#| "strategik tamoyilga amal qilgan holda eskizdan tortib arxitektura "
-#| "nazoratigacha bo‘lgan yirik, murakkab, ilm-fanni talab qiluvchi "
-#| "loyihalarni yuqori sifat va maqbul narxlarda amalga oshiramiz."
 msgid ""
 "“Arch design Service” kompaniyasi 2017-yilda tashkil etilgan bo‘lib,"
 "arxitektura-qurilish vazifalarini kompleks ishlab chiqish asosida qurilish "
@@ -124,7 +111,8 @@ msgid ""
 "holda eskizdan tortib arxitektura nazoratigacha bo‘lgan yirik,murakkab, ilm-"
 "fanni talab qiluvchi loyihalarni yuqori sifat va maqbul narxlarda amalga "
 "oshiramiz."
-msgstr "«Арх Дизайн Сервис был основан в 2017 году»,«Строительство на основе "
+msgstr ""
+"«Арх Дизайн Сервис был основан в 2017 году»,«Строительство на основе "
 "комплексной разработки архитектурно-строительных заданий»специализируется на "
 "реализации проектных решений в сфере. Сегодня мынашим клиентам из жилых "
 "комплексов, государственных, административных, специальных объектовДизайн и "
@@ -210,8 +198,6 @@ msgid "Malumot"
 msgstr "Данные"
 
 #: .\blog\templates\blog\contact.html:86
-#, fuzzy
-#| msgid "Boglanish"
 msgid "Biz bilan boglanish"
 msgstr "Связатся"
 
@@ -253,6 +239,12 @@ msgstr ""
 "промышленное водное хозяйство, сельское хозяйство»«Проектно-сметная "
 "документация на строительство объектов и комплексов хозяйственного "
 "назначения»разработка документов, в том числе их инженерных системдизайн."
+
+#: .\blog\templates\blog\index.html:108
+
+#| msgid "Batafsil"
+msgid "Batafsil malumot"
+msgstr "Подробнее"
 
 #: .\blog\templates\blog\index.html:118
 msgid ""
@@ -345,14 +337,10 @@ msgid "Uzingizni izohingizni koldiring"
 msgstr "Оставьте свой комментарий"
 
 #: .\blog\templates\blog\projects.html:90
-#, fuzzy
-#| msgid "Bizning xizmatlarimiz"
 msgid "Bizning loyihalarimiz"
 msgstr "Наши услуги"
 
 #: .\blog\templates\blog\projects.html:108
-#, fuzzy
-#| msgid "Loyihalar"
 msgid "Boshqa Loyihalar"
 msgstr "Проекты"
 
