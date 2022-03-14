@@ -111,8 +111,10 @@
 				<div class="op">
 					<img class="op__img" src="{{post.photo.url}}" alt="gallery img" />
 					<a class="op__content op__inner" href="{% url 'project' post.pk %}">
-						<h3 class="op__name">{{ post.title|safe}}</h3>
-						<div class="op__category">{{ post.text|safe}}</div>
+                        <h3 class="op__name">More Info ...</h3>
+						<div class="op__category">About this</div>
+{#						<h3 class="op__name">{{ post.title|safe}}</h3>#}
+{#						<div class="op__category">{{ post.text|safe}}</div>#}
 					</a>
 				</div>
 				{% endfor %}

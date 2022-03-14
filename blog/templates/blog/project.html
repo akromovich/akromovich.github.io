@@ -85,14 +85,19 @@
 		<!-- * article -->
 		<div class="container">
 			<div class="article">
-				<div class="article__collage">
-					<img
-						class="article__img"
+				<img
+						class="article__poster"
                         src="{{all_posts.photo.url}}"
                         alt="collage photo 1"
 					/>
-
-				</div>
+{#                <div class="article__collage">#}
+{#					<img#}
+{#						class="article__img"#}
+{#                        src="{{all_posts.photo.url}}"#}
+{#                        alt="collage photo 1"#}
+{#					/>#}
+{##}
+{#				</div>#}
 				<div class="article__info">
 					<div class="article__date">
 						<i class="article__icon fas fa-clock"></i>
@@ -104,18 +109,41 @@
 					</div>
 				</div>
 				<h1 class="article__title">{{ all_posts.title|safe }}</h1>
-				<p class="article__text">
+                <div class="article__collage">
 					{{ all_posts.text|safe }}
-				</p>
+				</div>
+{#				<p class="article__text">#}
+{#					{{ all_posts.text|safe }}#}
+{#				</p>#}
 			</div>
 		</div>
 		<!-- * comments -->
 		<div class="container">
-            {% for art in arts %}
-                <p>имя  пользователя: {{ art.title|safe }}</p>
-                <p>{{ art.text|safe }}</p><br>
-                <hr>
-            {% endfor %}
+{#            {% for art in arts %}#}
+{#                <p>имя  пользователя: {{ art.title|safe }}</p>#}
+{#                <p>{{ art.text|safe }}</p><br>#}
+{#                <hr>#}
+{#            {% endfor %}#}
+
+            <div class="comments">
+				<h2 class="comments__title">2 comments</h2>
+                {% for art in arts %}
+                    <div class="comment">
+                        <img class="comment__img" src="{% static 'img/user.png' %}" alt="user">
+                        <div class="comment__box">
+                            <div class="comment__date">07.02.2022</div>
+                            <h3 class="comment__author">имя  пользователя: {{ art.title|safe }}</h3>
+                            <div class="comment__text">
+                                {{ art.text|safe }}
+                            </div>
+                            <div class="comment__bottom">
+                                <button class="comment__reply">Reply</button>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+			</div>
+
 			<!-- ! comment form -->
 			<h2 class="comments__form-title">{% trans 'Uzingizni izohingizni koldiring' %}</h2>
 			<form class="comments__form" method="post">
