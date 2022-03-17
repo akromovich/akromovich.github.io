@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 11:17+0500\n"
+"POT-Creation-Date: 2022-03-14 23:04+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,9 +42,9 @@ msgstr "Home"
 #: .\blog\templates\blog\index.html:60 .\blog\templates\blog\index.html:151
 #: .\blog\templates\blog\index.html:266 .\blog\templates\blog\news.html:53
 #: .\blog\templates\blog\news.html:146 .\blog\templates\blog\project.html:53
-#: .\blog\templates\blog\project.html:178
+#: .\blog\templates\blog\project.html:206
 #: .\blog\templates\blog\projects.html:53
-#: .\blog\templates\blog\projects.html:164
+#: .\blog\templates\blog\projects.html:166
 #: .\blog\templates\blog\services.html:53
 #: .\blog\templates\blog\services.html:225
 msgid "Biz haqimizda"
@@ -54,9 +54,9 @@ msgstr "About us"
 #: .\blog\templates\blog\contact.html:56 .\blog\templates\blog\contact.html:223
 #: .\blog\templates\blog\index.html:63 .\blog\templates\blog\index.html:269
 #: .\blog\templates\blog\news.html:56 .\blog\templates\blog\news.html:149
-#: .\blog\templates\blog\project.html:56 .\blog\templates\blog\project.html:181
+#: .\blog\templates\blog\project.html:56 .\blog\templates\blog\project.html:209
 #: .\blog\templates\blog\projects.html:56
-#: .\blog\templates\blog\projects.html:167
+#: .\blog\templates\blog\projects.html:169
 #: .\blog\templates\blog\services.html:56
 #: .\blog\templates\blog\services.html:228
 msgid "Loyihalar"
@@ -66,9 +66,9 @@ msgstr "Projects"
 #: .\blog\templates\blog\contact.html:59 .\blog\templates\blog\contact.html:226
 #: .\blog\templates\blog\index.html:66 .\blog\templates\blog\index.html:272
 #: .\blog\templates\blog\news.html:59 .\blog\templates\blog\news.html:152
-#: .\blog\templates\blog\project.html:59 .\blog\templates\blog\project.html:184
+#: .\blog\templates\blog\project.html:59 .\blog\templates\blog\project.html:212
 #: .\blog\templates\blog\projects.html:59
-#: .\blog\templates\blog\projects.html:170
+#: .\blog\templates\blog\projects.html:172
 #: .\blog\templates\blog\services.html:59
 #: .\blog\templates\blog\services.html:231
 msgid "Xizmatlar"
@@ -79,9 +79,9 @@ msgstr "Services"
 #: .\blog\templates\blog\index.html:69 .\blog\templates\blog\index.html:275
 #: .\blog\templates\blog\news.html:62 .\blog\templates\blog\news.html:88
 #: .\blog\templates\blog\news.html:155 .\blog\templates\blog\project.html:62
-#: .\blog\templates\blog\project.html:187
+#: .\blog\templates\blog\project.html:215
 #: .\blog\templates\blog\projects.html:62
-#: .\blog\templates\blog\projects.html:173
+#: .\blog\templates\blog\projects.html:175
 #: .\blog\templates\blog\services.html:62
 #: .\blog\templates\blog\services.html:234
 msgid "Yangiliklar"
@@ -109,15 +109,15 @@ msgid ""
 "holda eskizdan tortib arxitektura nazoratigacha bo‘lgan yirik,murakkab, ilm-"
 "fanni talab qiluvchi loyihalarni yuqori sifat va maqbul narxlarda amalga "
 "oshiramiz."
-msgstr "Founded in 2017 by Arch Design Service, "
-"Construction on the basis of complex development of architectural and construction tasks"
-"specializes in the implementation of project solutions in the field. Today we"
-"to our clients from residential complexes, state, administrative, special facilities"
-"Design and design services for everything from houses and interiors"
-"We offer a full range. We have followed a strategic principle"
-"from sketch to architectural control to large, complex, scientific"
-"Implement science-intensive projects at high quality and reasonable prices"
-"we increase."
+msgstr ""
+"Founded in 2017 by Arch Design Service, Construction on the basis of complex "
+"development of architectural and construction tasksspecializes in the "
+"implementation of project solutions in the field. Today weto our clients "
+"from residential complexes, state, administrative, special facilitiesDesign "
+"and design services for everything from houses and interiorsWe offer a full "
+"range. We have followed a strategic principlefrom sketch to architectural "
+"control to large, complex, scientificImplement science-intensive projects at "
+"high quality and reasonable priceswe increase."
 
 #: .\blog\templates\blog\about.html:121
 msgid "Nega aynan biz"
@@ -131,8 +131,9 @@ msgstr "ENGINEERING"
 msgid ""
 "Texnik-iqtisodiy asos – Loyihalash loyihasi – Loyiha – Batafsil loyihalash – "
 "Ishchi hujjatlar"
-msgstr "Feasibility Study - Design Project - Project - Detailed Design - "
-"“Working Papers"
+msgstr ""
+"Feasibility Study - Design Project - Project - Detailed Design - “Working "
+"Papers"
 
 #: .\blog\templates\blog\about.html:139
 msgid "LOYIHA BOSHQARUVI"
@@ -142,8 +143,9 @@ msgstr "PROJECT MANAGEMENT"
 msgid ""
 "Rejalashtirish va ishni tashkil qilish, byudjetni tuzish, logistika – "
 "tizimlarni mijozga etkazib berish"
-msgstr "Planning and work organization, budgeting, logistics - "
-"delivery of systems to the customer"
+msgstr ""
+"Planning and work organization, budgeting, logistics - delivery of systems "
+"to the customer"
 
 #: .\blog\templates\blog\about.html:150
 msgid "TEXNIK XIZMAT KORSATISH"
@@ -153,8 +155,8 @@ msgstr "MAINTENANCE"
 msgid ""
 "Uskunalar va materiallarni o’rnatish – ishga tushirish ishlari – texnik "
 "yordam"
-msgstr "Installation of equipment and materials - commissioning - technical "
-"help"
+msgstr ""
+"Installation of equipment and materials - commissioning - technical help"
 
 #: .\blog\templates\blog\about.html:203
 msgid "Ofis binolari"
@@ -190,8 +192,8 @@ msgstr "Schools"
 
 #: .\blog\templates\blog\about.html:296 .\blog\templates\blog\contact.html:217
 #: .\blog\templates\blog\index.html:263 .\blog\templates\blog\news.html:143
-#: .\blog\templates\blog\project.html:175
-#: .\blog\templates\blog\projects.html:161
+#: .\blog\templates\blog\project.html:203
+#: .\blog\templates\blog\projects.html:163
 #: .\blog\templates\blog\services.html:222
 msgid "Malumot"
 msgstr "Reference"
@@ -205,12 +207,12 @@ msgid "Xabar yuborish"
 msgstr "Send a message"
 
 #: .\blog\templates\blog\contact.html:107
-#: .\blog\templates\blog\project.html:130
+#: .\blog\templates\blog\project.html:158
 msgid "Yuborish"
 msgstr "Send"
 
 #: .\blog\templates\blog\contact.html:108
-#: .\blog\templates\blog\project.html:131
+#: .\blog\templates\blog\project.html:159
 msgid "Qayta yozish"
 msgstr "Rewrite"
 
@@ -233,10 +235,11 @@ msgid ""
 "xojaligimaqsadlarida obektlar va majmualarni qurish uchun loyiha-smeta "
 "hujjatlarini ishlab chiqish,shu jumladan ularning muhandislik tizimlarini "
 "loyihalash."
-msgstr "Interior and exterior design Landscaping, civil, industrial water management, agriculture "
-"Design estimate for the construction of facilities and complexes for economic purposes"
-"development of documents, including their engineering systems"
-"design."
+msgstr ""
+"Interior and exterior design Landscaping, civil, industrial water "
+"management, agriculture Design estimate for the construction of facilities "
+"and complexes for economic purposesdevelopment of documents, including their "
+"engineering systemsdesign."
 
 #: .\blog\templates\blog\index.html:108
 msgid "Batafsil malumot"
@@ -246,7 +249,8 @@ msgstr "Learn more"
 msgid ""
 "Qurilish obektlarini kapital va joriy tamirlash uchun loyiha-smeta "
 "hujjatlari."
-msgstr "Design and estimate for capital and current repairs of construction sites "
+msgstr ""
+"Design and estimate for capital and current repairs of construction sites "
 "documents."
 
 #: .\blog\templates\blog\index.html:130
@@ -254,9 +258,9 @@ msgid ""
 "Arxitektura yodgorliklarini restavratsiya qilish uchun hujjatlar Bino va "
 "inshootlarning muhandislik tarmoqlari va tizimlarini loyihalash va "
 "mualliflik nazorati."
-msgstr "Documents for the restoration of architectural monuments Building and "
-"Design of engineering networks and systems of buildings and"
-"copyright control."
+msgstr ""
+"Documents for the restoration of architectural monuments Building and Design "
+"of engineering networks and systems of buildings andcopyright control."
 
 #: .\blog\templates\blog\index.html:148
 msgid ""
@@ -269,15 +273,15 @@ msgid ""
 "tamoyilga amal qilgan holda eskizdan tortib arxitektura nazoratigacha "
 "bo‘lgan yirik, murakkab, ilm-fanni talab qiluvchi loyihalarni yuqori sifat "
 "va maqbul narxlarda amalga oshiramiz."
-msgstr "Founded in 2017 by Arch Design Service, "
-"Construction on the basis of complex development of architectural and construction tasks"
-"specializes in the implementation of project solutions in the field. Today we"
-"to our clients from residential complexes, state, administrative, special facilities"
-"Design and design from country houses and interiors"
-"We offer a full range of services. We are a strategic priority"
-"from sketch to architectural control, following the principle"
-"High quality of large, complex, science-intensive projects"
-"and we do it at reasonable prices."
+msgstr ""
+"Founded in 2017 by Arch Design Service, Construction on the basis of complex "
+"development of architectural and construction tasksspecializes in the "
+"implementation of project solutions in the field. Today weto our clients "
+"from residential complexes, state, administrative, special facilitiesDesign "
+"and design from country houses and interiorsWe offer a full range of "
+"services. We are a strategic priorityfrom sketch to architectural control, "
+"following the principleHigh quality of large, complex, science-intensive "
+"projectsand we do it at reasonable prices."
 
 #: .\blog\templates\blog\index.html:160
 msgid ""
@@ -289,14 +293,14 @@ msgid ""
 "bajarishda Buyurtmachining moliyaviy resurslaridan oqilona foydalanishni "
 "ta’minlagan holda, taklif etilayotgan xizmatlar turlarini doimiy ravishda "
 "rivojlantirish, takomillashtirish va kengaytirishga intilamiz."
-msgstr "Our mission Our goal is the client's investment intention and "
-"all modern, taking into account the requirements of international standards"
-"from technology, science, design, ethics, aesthetics"
-"Develop a safe, efficient and high-tech project using"
-"is the output and implementation. Design, construction and general contracting work"
-"Rational use of financial resources of the Customer in execution"
-"providing the types of services offered on a regular basis"
-"strive to develop, improve and expand."
+msgstr ""
+"Our mission Our goal is the client's investment intention and all modern, "
+"taking into account the requirements of international standardsfrom "
+"technology, science, design, ethics, aestheticsDevelop a safe, efficient and "
+"high-tech project usingis the output and implementation. Design, "
+"construction and general contracting workRational use of financial resources "
+"of the Customer in executionproviding the types of services offered on a "
+"regular basisstrive to develop, improve and expand."
 
 #: .\blog\templates\blog\index.html:162
 msgid "Batafsil"
@@ -320,13 +324,20 @@ msgstr "An expert will come, advise you and take measurements"
 
 #: .\blog\templates\blog\index.html:210
 msgid "Loyihani muhokama qilish, Shartnoma tuzish, Oldindan tolov"
-msgstr "Negotiation of the project, conclusion of the contract, advance payment"
+msgstr ""
+"Negotiation of the project, conclusion of the contract, advance payment"
 
 #: .\blog\templates\blog\index.html:218
 msgid "Obektni etkazib berish, Yakuniy tolov"
 msgstr "Delivery of the object, Final payment"
 
-#: .\blog\templates\blog\project.html:120
+#: .\blog\templates\blog\project.html:140
+
+#| msgid "Qayta yozish"
+msgid "Javob yozish"
+msgstr "Reply"
+
+#: .\blog\templates\blog\project.html:148
 msgid "Uzingizni izohingizni koldiring"
 msgstr "Leave your comment"
 
@@ -337,6 +348,18 @@ msgstr "Our projects"
 #: .\blog\templates\blog\projects.html:108
 msgid "Boshqa Loyihalar"
 msgstr "Other Projects"
+
+#: .\blog\templates\blog\projects.html:114
+
+#| msgid "Batafsil malumot"
+msgid "Batafsil maʼlumot "
+msgstr "Learn more"
+
+#: .\blog\templates\blog\projects.html:115
+
+#| msgid "Biz haqimizda"
+msgid "Bu haqida"
+msgstr "About us"
 
 #: .\blog\templates\blog\services.html:98
 msgid "Interyer dizayini"

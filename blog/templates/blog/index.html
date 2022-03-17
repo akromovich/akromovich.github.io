@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 {% load static %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
 
 <html lang="en">
 	<head>
@@ -72,21 +75,31 @@
 						<a class="nav__link" href="{% url 'contacts' %}">{% trans 'Boglanish' %}</a>
 					</li>
 				</ul>
-				<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                    <input name="next" type="hidden" value="{{ redirect_to }}">
-                    <select name="language">
-                        {% get_current_language as LANGUAGE_CODE %}
-                        {% get_available_languages as LANGUAGES %}
-                        {% get_language_info_list for LANGUAGES as languages %}
-                        {% for language in languages %}
-                            <option class="nav__item" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                                 {{ language.code }}
-                            </option>
-                        {% endfor %}
-                    </select>
 
-{#                    <input type="submit" value="Go">#}
-                </form>
+                <div class="translation-mobile">
+                <div class="m-select m-is-active">
+                    <div class="m-translation-language">{{ request.LANGUAGE_CODE }}</div>
+                    <div class="m-select-body">
+                        <div class="m-select-body-style">
+                            {% for language in languages %}
+                                <form action="{% url 'set_language' %}" method="post" class="m-select-item">
+                                    {% csrf_token %}
+                                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                                    <select class="custom-select" name="language" style="display: none;">
+                                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                                selected{% endif %}>
+                                            {{ language.name_local }} ({{ language.code }})
+                                        </option>
+                                    </select>
+                                    <button type="submit" class="buttonLenguage">{{ language.code }}
+                                    </button>
+                                </form>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
             </div>
 		</nav>
 		<!-- ! location to be smooth scrolled to -->

@@ -33,7 +33,7 @@ class Articles(models.Model):
     title = models.CharField(max_length=30,verbose_name="имя пользователя",null=False,blank=False)
     email = models.EmailField(verbose_name="Email",null=False,blank=False)
     text = models.CharField(max_length=300,verbose_name="Текст",null=False,blank=False)
-    date=models.DateTimeField(auto_now_add=True)
+    date=models.DateField(auto_now_add=True)
 
     class Meta:
         verbose_name = 'Коментарие'
