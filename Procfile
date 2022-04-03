@@ -1,1 +1,1 @@
-web: gunicorn archdesign.wsgi --log-file -
+web: gunicorn archdesign_site.wsgi --log-file -
