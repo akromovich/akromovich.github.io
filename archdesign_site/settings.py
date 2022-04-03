@@ -13,10 +13,8 @@ import os
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -27,8 +25,7 @@ SECRET_KEY = 'django-insecure-l0l!uc_fp-yqjz169q9-0*x%e3_@1#i1le#c65#hu&vh2e1*tl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['archdesign.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -77,7 +74,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'archdesign_site.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
@@ -109,7 +105,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -125,10 +120,8 @@ LANGUAGES = [
     ('ru', _('Russian')),
     ('en', _('English')),
 
-
 ]
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
@@ -136,10 +129,8 @@ MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media'
-
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
@@ -148,7 +139,7 @@ CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#ckeditor configs
+# ckeditor configs
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'Advanced',
@@ -156,3 +147,5 @@ CKEDITOR_CONFIGS = {
         'width': 700,
     },
 }
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
